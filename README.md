@@ -1,8 +1,19 @@
 # nlw-heat-node
 
-## Project NLW Heat
+<h1 align="center">NLW Heat - Node.js</h1>
 
-### Estrutura base do backend da aplicação de recebimento e envioo de mensagens utlizando NodeJS. 
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
+  <img src="https://img.shields.io/static/v1?label=NLW&message=Heat&color=8257E5&labelColor=000000" alt="NLW Heat" />
+</p>
+
+## ✍️ Descrião Básica
 
 Nesse projeto foi utilizado *Typescript*, que auxilia no aumento da produtividade em desenvolvimento.
 
@@ -12,15 +23,39 @@ e roda em um container Docker. Além da abstração ele também possui um gerenc
 Para requisições em tempo em real com atualizações instantânes foi utilizada a *Socket.IO*,uma biblioteca JavaScript para aplicativos da web em tempo real.
 Permite comunicação bidirecional em tempo real entre clientes e servidores da Web.
 
-## Comandos
+## ✨ Tecnologias
 
-**Start Project**
-- yarn dev
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [Prisma](https://www.prisma.io/)
+- [JSON Web Token](https://jwt.io/)
+- [Socket.IO](https://socket.io/)
 
-## FAQ
-- As migrations possuem comportamento diferenciado dependendo do SO, por isso, caso o comando "yarn prisma migrate dev" seja rodado em uma primeira , para novas interações com o banco
-de dados através do arquivo "schema.prisma", talvez sueja o problema do compilador nao instalar ou não rodar o client, para resolver esse problema é possivel seguir os passos:
+## 🚀 Como executar
+
+> Obs.: Nesse projeto temos autenticação via OAuth com o GitHub. Para registrar um novo usuário com esse procedimento siga os passos:
+- Acesse seu github > Profile > Settings
+- Navegue até "Developer Settings"
+- Ache a opção "OAuth" > new OAuth App
+- De um nome para a aplicação
+- Preenche os dados de Homepage URL e Authorization callback URL
+
+<p align="center">
+ <b>ATENÇÃO: ambos os campos de URL devem estar preenchidos da mesma forma!!</b>
+</p>
+ 
+- Clone o repositório e acesse a pasta;
+- Faça uma copia do arquivo `.env.example` para `.env` e preencha com as suas credenciais do GitHub;
+- Instale as dependências com `yarn`;
+- Executa as migrations com `yarn prisma migrate dev`;
+- Inicie o servidor com `yarn dev`;
+
+A aplicação pode ser acessada em [`localhost:4000`](http://localhost:4000).
+
+## ❓ FAQ
+- As migrations possuem comportamento diferenciado dependendo do SO, por isso, caso o comando "yarn prisma migrate dev" gere erro, principalmente para novas interações com o banco de dados através do arquivo "schema.prisma", talvez seja o problema do compilador não ter instalado o client, para resolver esse problema é possivel seguir os passos:
 \
   *1- excluir a pasta node_modules*\
   *2- excluir os arquivos que ele criou na pasta do prisma ,com exceção do 'schema.prisma'*\
@@ -28,6 +63,11 @@ de dados através do arquivo "schema.prisma", talvez sueja o problema do compila
   *4 - por recomendação, abrir o vscode novamente com permissões avançadas de  admin*\
   *5 - rodar o coomando 'Yarn Install' pra baixar o node_modules novamente*\
   *6 - roder o comando 'npm install @prisma/client', para instalar manualmente a lib e, em seguida, o "yarn prisma migrate dev"*
+
+## 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 
 
 
